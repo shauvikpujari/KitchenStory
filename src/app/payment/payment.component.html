@@ -1,0 +1,31 @@
+<body style="min-height: 100%; max-height: 100%;">
+  <div class="container" >
+    <h1>Cart</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">image</th>
+          <th scope="col">Price</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let x of cakelist;let indexofele=index;">
+          <td>{{x.name}}</td>
+          <td style="height: 70px;"><img src="{{x.image}}" alt="cake" style="height: 69px; width: 69px;"></td>
+          <td>{{x.price | discount}} </td>
+          <td><button class="btn btn-primary" (click)="decreasequant(indexofele)" ><i class="fa-solid fa-minus"></i></button>{{x.quantity | space}}<button class="btn btn-primary " style="margin-left: 10px;" (click)="increasequant(indexofele)"><i class="fa-solid fa-plus"></i></button></td>
+          <td><button class="btn btn-danger" (click)="removefromcart(indexofele)"><i class="fa-solid fa-minus"></i></button></td>
+        </tr>
+      </tbody>
+    </table>
+    <div>Total :{{total | discount}} <button class="btn btn-primary" style="float: right;"  (click)="checkout()">Check Out <i class="fas fa-arrow-right"></i></button></div>
+  </div>
+  
+</body>
+
+  
+ 
+

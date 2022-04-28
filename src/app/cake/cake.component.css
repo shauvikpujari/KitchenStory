@@ -1,0 +1,18 @@
+
+.card
+{
+    
+    background-color:#F3DEFF;
+    border-radius: 20px;
+    transition: transform .3s;
+}
+.card:hover{
+    transform: translateY(-15px);
+    transition: transform .3s;
+}
+.cost span
+{
+    color:#fb3531;
+    font-weight: bold;
+    font-size: 20px;
+}

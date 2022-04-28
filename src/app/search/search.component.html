@@ -1,0 +1,5 @@
+<p>{{cake.length}} results Found</p>
+<div class="row">
+    <div  *ngFor="let x of cake;" class="col d-flex align-item-top justify-content-center" > 
+         <app-cake [cakedata]="x"></app-cake>
+  </div>

@@ -1,0 +1,13 @@
+
+  <div class="row" (click)="showcakedetails()">
+    <div class="card mt-3" style="width: 17rem; height: 321px;">
+      <div class="align-items-center p-2 text-center">
+        <img src={{cakedata.image}}  alt="" class="rounded card-img-top"  height="180px">
+         <h5>{{cakedata.name}}</h5>
+
+         <div class="mt-3 cost text-dark">
+              <span> {{cakedata.price | discount}}</span>
+         </div>
+      </div>
+    </div>
+  </div>

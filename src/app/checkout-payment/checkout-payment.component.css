@@ -1,0 +1,32 @@
+body {
+    background-color: #7986CB;
+    height: 150vh;
+    border-radius: 12px;;
+    
+}
+
+.card {
+    width: 330px;
+    border: none;
+    
+    border-radius: 15px;
+    background-color: #311B92
+}
+
+.upper {
+    padding: 20px;
+    color: #fff
+}
+
+hr.new1 {
+    border-top: 2px dashed #fff
+}
+
+.bottom {
+    padding: 20px;
+    color: #fff
+}
+
+.muted-text {
+    color: #ffffffa3
+}

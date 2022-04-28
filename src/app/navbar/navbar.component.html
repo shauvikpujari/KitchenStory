@@ -1,0 +1,52 @@
+<nav  class="navbar navbar-expand-lg navbar-light bg-danger sticky-top text-light">
+    <div class="container-fluid">
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        
+        <a routerLink="/home" class="navbar-brand text-light" >{{projecttitle}}</a>
+          <form class="d-flex">
+
+            <input class="form-control me-2" name="cakename" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="cakename">
+            <button class="btn btn-outline-light" type="sumbit" (click)="search()"><i class="fas fa-search"></i></button>
+          </form>
+
+          <div *ngIf="isLoggedin" class="text-right pl-10 d-flex" style="padding-left: 50%;">
+          <div>
+           <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-user fa-xl"></i>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="position: absolute; right:50px;">
+                <li><a class="dropdown-item" (click)="logout()">Log Out</a></li>
+                <li><a class="dropdown-item" routerLink="/previousorder">Previous Order</a></li>
+              </ul>
+            </li>
+
+           </ul>
+          </div>
+          <div style="margin-top: 10px; margin-right:15px;" routerLink="/payment">
+            
+              <i class="fas fa-shopping-cart fa-xl position-relative" style="padding-right: 0px;margin-right: 0px;"></i>
+              <span class="badge rounded-pill badge-notification bg-light position-absolute top-0 text-dark">{{count}}</span>
+            
+          </div>
+            
+         
+           <div *ngIf="isAdmin" style="padding-left: 10px; padding-top: 9px;" style="margin-bottom:3px; margin-left: 15px;" routerLink="/addcakes"> <button class="btn btn-outline-light"><i class="fa-solid fa-plus"></i> Cake</button></div>
+          </div>
+         <div *ngIf="!isLoggedin" class="text-right pl-10" style="padding-left: 59%;">
+         <button routerLink="/login" class="btn btn-outline-light navbar-item" style="margin-right: 4px;margin-left: 4px;">Login</button>
+         <button routerLink="/signup" class="btn btn-outline-light navbar-item"><i class="fa-solid fa-right-to-bracket"></i></button>
+        
+        </div>
+        
+        
+        
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+    
